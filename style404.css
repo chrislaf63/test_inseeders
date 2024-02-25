@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 80px;
+    margin-right: 60px;
+    /* margin-block: 30px; */
+    font-family: "Comfortaa", sans-serif;
+    background: linear-gradient(#d3ddeb, #e9eef5);
+}
+
+.darkmode {
+    background: linear-gradient(#0d1219, #06080b);
+    color: #e9eef5;
+}
+
+/* PARTIE HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 80px;
+    top: 30px;
+    right: 60px;
+}
+
+.blockLogo {
+    display: flex;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.purple {
+    color: #8438b8;
+    font-weight: 200;
+}
+
+.blockTitle {
+    padding-left: 15px;
+    padding-top: 13px;
+}
+
+.title1 {
+    text-transform: uppercase;
+    font-size: 2.6em;
+}
+
+.title2 {
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    /* margin-top: 100px; */
+    align-items: center;
+}
+
+.blockTitleReversed {
+    padding-right: 15px;
+    padding-top: 13px;
+}
+
+.title1Reversed{
+    text-transform: uppercase;
+    font-size: 2.6em;
+    text-align: right;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 8em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.error404{
+    text-transform: uppercase;
+    font-size: 5em;
+    text-align: center;
+}
+
+.askedPage{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 200px;
+}
+
+.phoneLight img,
+.phoneDark img{
+    height: 60vh;
+    width: auto;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 80px;
+    bottom: 30px;
+    right: 60px
+}

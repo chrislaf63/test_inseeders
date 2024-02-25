@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 80px;
+    margin-right: 60px;
+    margin-block: 30px;
+    font-family: "Comfortaa", sans-serif;
+    background: linear-gradient(#d3ddeb, #e9eef5);
+}
+
+.darkmode {
+    background: linear-gradient(#0d1219, #06080b);
+    color: #e9eef5;
+}
+
+/* PARTIE HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockLogo {
+    display: flex;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.purple {
+    color: #8438b8;
+    font-weight: 200;
+}
+
+.blockTitle {
+    padding-left: 15px;
+    padding-top: 13px;
+}
+
+.title1 {
+    text-transform: uppercase;
+    font-size: 2.6em;
+}
+
+.title2 {
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+.toggle {
+    background: #e9eef5;
+    box-shadow: inset 5px 5px 10px #d4d9df, inset -5px -5px 10px #feffff;
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.toggleDark {
+    background: #06080b;
+    box-shadow: inset 40px 40px 42px #020304, inset -40px -40px 42px #0a0d12;
+}
+
+.toggleButton {
+    color: #9c8aa8;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 5px;
+    background: linear-gradient(145deg, #f9ffff, #d2d6dd);
+    box-shadow: 5px 5px 10px #e7ecf3, -5px -5px 10px #ebf0f7;
+}
+
+.toggleButtonDark {
+    color: #9c8aa8;
+    background: #0d1219;
+    box-shadow: inset 12px 12px 24px #0b0f15, inset -12px -12px 24px #0f151d;
+}
+
+.animate {
+    animation: toggle 0.5s forwards;
+    -webkit-animation: toggle 0.5s forwards;
+}
+
+.animate-reverse {
+    animation: toggle-reverse 0.5s forwards;
+    -webkit-animation: toggle-reverse 0.5s forwards;
+}
+
+.toggleButton:hover {
+    cursor: pointer;
+}
+
+svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SECTION CORPS DE PAGE */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionLeft {
+    width: 40vw;
+}
+
+.cominSoon {
+    font-size: 4em;
+    text-transform: uppercase;
+    margin-top: 70px;
+    margin-left: 5px;
+    margin-bottom: 120px;
+}
+
+.cta {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    margin-left: 5px;
+    line-height: 1.4;
+    margin-bottom: 180px;
+}
+
+label {
+    display: block;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    margin-left: 5px;
+    line-height: 1.4;
+}
+
+input {
+    color: #9c8aa8;
+    display: inline;
+    width: 80%;
+    max-width: 500px;
+    margin-left: 5px;
+    padding: 15px;
+    font-size: 1em;
+    font-style: italic;
+    border: none;
+    border-radius: 10px;
+    background: #e9eef5;
+    box-shadow: inset 5px 5px 10px #d4d9df, inset -5px -5px 10px #feffff;
+}
+
+.inputDark {
+    color: inherit;
+    border: none;
+    background: #06080b;
+    box-shadow: inset 50px 50px 48px #020304, inset -50px -50px 48px #0a0d12;
+}
+
+button {
+    color: #9c8aa8;
+    height: 39px;
+    width: 90px;
+    position: relative;
+    left: -100px;
+    top: -8px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #f9ffff, #d2d6dd);
+    box-shadow: 32px 32px 83px #dbe0e6, -32px -32px 83px #f7fcff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.validDark {
+    color: #9c8aa8;
+    background: linear-gradient(145deg, #0e131b, #0c1017);
+    box-shadow: 5px 5px 56px #0d1219, -5px -5px 56px #0d1219;
+}
+
+.sectionRight {
+    display: flex;
+    position: relative;
+    width: 60vw;
+    justify-content: space-around;
+}
+
+.phoneDark {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.phoneLight {
+    position: absolute;
+    right: 450px;
+    top: -90px;
+    box-shadow: 0px 0px 40px rgba(177, 177, 177, 0.7);
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+
+.phoneLight img {
+    height: 85vh;
+    width: auto;
+}
+
+.phoneDark img {
+    height: 85vh;
+    width: auto;
+}
+
+/* REALISATION DES ANIMATIONS DU BOUTON DE DARK MODE */
+
+@keyframes toggle {
+    0% {
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+}
+    100% {
+        transform: translateX(60px) rotatez(1turn);
+        -webkit-transform: translateX(60px) rotatez(1turn);
+        -moz-transform: translateX(60px) rotatez(1turn);
+        -ms-transform: translateX(60px) rotatez(1turn);
+        -o-transform: translateX(60px) rotatez(1turn);
+}
+}
+
+@keyframes toggle-reverse {
+    0% {
+        transform: translateX(60px);
+        -webkit-transform: translateX(60px);
+        -moz-transform: translateX(60px);
+        -ms-transform: translateX(60px);
+        -o-transform: translateX(60px);
+    }
+    100% {
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+    }
+}
+
+
+/* GESTION DU RESPONSIVE AVEC DIFFERENTS BREAKPOINTS POUR AVOIR UN AFFICHAGE TOUJOURS OPTIMAL */
+
+@media screen and (max-width: 1660px) {
+    .sectionLeft {
+        width: 50vw;
+    }
+
+    .sectionRight {
+        width: 50vw;
+    }
+    .phoneDark {
+        right: 10px;
+        bottom: 50px;
+    }
+
+    .phoneLight {
+        right: 350px;
+        top: 0px;
+    }
+    .phoneLight img {
+        height: 65vh;
+        width: auto;
+    }
+
+    .phoneDark img {
+        height: 65vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1510px) {
+    .phoneDark {
+        right: 10px;
+        bottom: 50px;
+    }
+
+    .phoneLight {
+        right: 350px;
+        top: 0px;
+        margin-bottom: 50px;
+    }
+
+    .phoneLight img {
+        height: 60vh;
+        width: auto;
+    }
+
+    .phoneDark img {
+        height: 60vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .phoneDark {
+        bottom: 100px;
+    }
+
+    .phoneLight {
+        right: 270px;
+        top: 50px;
+    }
+
+    .phoneLight img {
+        height: 50vh;
+        width: auto;
+    }
+
+    .phoneDark img {
+        height: 50vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    body {
+        margin-inline: 20px;
+        margin-block: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sectionLeft {
+        width: 100%;
+    }
+
+    .sectionRight {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .cominSoon {
+        width: 100%;
+        text-align: center;
+        font-size: 2.4em;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    input {
+        margin-left: 15%;
+    }
+
+    .cta {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .phoneDark {
+        position: static;
+        height: 454px;
+    }
+
+    .phoneLight {
+        margin-left: 10;
+        margin-right: 20px;
+        position: static;
+        height: 454px;
+    }
+
+    .phoneLight img {
+        height: 50vh;
+        width: auto;
+    }
+
+    .phoneDark img {
+        height: 50vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    input {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .toggle {
+        display: none;
+    }
+
+    .logo img {
+        height: 80px;
+        margin-left: 30px;
+    }
+
+    .blockTitle {
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+
+    .title1 {
+        font-size: 1.8em;
+    }
+
+    .title2 {
+        font-size: 1.5em;
+    }
+    .valid {
+        display: none;
+    }
+
+    input {
+        margin-left: 5%;
+    }
+
+    .phoneLight {
+        height: 363px;
+    }
+    .sectionRight {
+        margin-top: 50px;
+    }
+
+    .phoneLight img {
+        height: 40vh;
+        width: auto;
+    }
+
+    .phoneDark img {
+        height: 40vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        margin-inline: 10px;
+        margin-block: 20px;
+    }
+
+    .logo img {
+        height: 60px;
+        margin-left: 30px;
+    }
+
+    .blockTitle {
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+
+    .title1 {
+        font-size: 1.5em;
+    }
+
+    .title2 {
+        font-size: 1.3em;
+    }
+
+    .cominSoon {
+        width: 100%;
+        text-align: center;
+        font-size: 2.1em;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .cta {
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-left: 10px;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-left: 5px;
+        line-height: 1.4;
+    }
+
+    input {
+        width: 300px;
+        margin-left: 5px;
+        padding-block: 5px;
+        padding-inline: 5px;
+        font-size: 1em;
+        font-style: italic;
+        border-radius: 10px;
+    }
+
+    button {
+        top: -2px;
+        border: none;
+    }
+    .phoneDark {
+        margin-bottom: 50px;
+    }
+
+    .phoneLight {
+        height: 222px;
+    }
+
+    .phoneLight img {
+        height: 30vh;
+        width: auto;
+    }
+
+    .phoneDark img {
+        height: 30vh;
+        width: auto;
+    }
+}
+
+@media screen and (min-height: 941px) {
+    .cominSoon {
+        font-size: 5em;
+        margin-top: 100px;
+        margin-left: 5px;
+        margin-bottom: 140px;
+    }
+    
+    .cta {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        margin-left: 5px;
+        line-height: 1.6;
+        margin-bottom: 280px;
+    }
+
+    .phoneLight,
+.phoneDark {
+    position: static;
+    height: 70vh;
+}
+
+.phoneLight img,
+.phoneDark img{
+    height: 70vh;
+}
+
+
+.phoneLight{
+    margin-left: 100px;
+}
+.phoneDark{
+    margin-top: 150px
+}
+}
+
